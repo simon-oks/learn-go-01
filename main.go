@@ -1,33 +1,30 @@
 package main
 
-import (
-	"fmt"
-	"math/rand"
-)
+import "fmt"
 
 func main() {
-	if x := rand.Int(); x%2 == 0 {
-		fmt.Println(x, "est un nombre pair")
-	} else {
-		fmt.Println(x, "est un nombre impair")
+	//for i := 0; i < 5; i++ {
+	//	fmt.Println(i)
+	//}
+
+	x := 0
+	//for x < 5 {
+	//	fmt.Println(x)
+	//	x++
+	//}
+
+	//for {
+	//	if x > 4 {
+	//		break
+	//	}
+	//	fmt.Println(x)
+	//	x++
+	//}
+
+	for ; x <= 10; x++ {
+		if x%2 == 1 {
+			continue
+		}
+		fmt.Println(x)
 	}
-
-	y := rand.Int() % 2
-
-	if y == 0 {
-		fmt.Println(y, "Paire!")
-	} else {
-		fmt.Println(y, "Impaire!")
-	}
-
-	age := 15
-
-	if age > 18 {
-		fmt.Println("Je suis majeur!")
-	} else if age == 18 {
-		fmt.Println("Je viens tout juste d'être majeur")
-	} else {
-		fmt.Println("Je suis mineur!")
-	}
-
 }
