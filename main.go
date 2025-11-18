@@ -4,21 +4,26 @@ import "fmt"
 
 func main() {
 	var (
-		x int
-		y string
-		z bool
+		b   bool
+		s   string
+		i   int  // par défaut int64 ou int32 suivant si votre machine est en 64 bits ou 23 bits
+		u   uint // par défaut uint64 ou uint32
+		u8  uint8
+		i8  int8
+		i16 int16
+		u16 uint16
+		f   float32
 	)
-	//var x int
-	//x = 15
-	//y := 16
 
-	x = 23
-	y = "Simon"
-	z = true
+	b = true
+	s = "Simon"
+	i = -15
+	u = 15
+	u8 = 254 // 0 - 255
+	i8 = 127 // -128 - 127
+	i16 = -21500
+	u16 = 40000
+	f = 3.14
 
-	//fmt.Printf("Mon age est: %v!", x)
-	//fmt.Printf("\nMon prénom est: %v!", y)
-	//fmt.Printf("\nJ'ai plus de 18 ans: %v!\n", z)
-	fmt.Printf("Mon age est: %v, mon nom est: %v, j'ai plus de 18 ans: %v\n", x, y, z)
-	fmt.Printf("Bonjour à tous, je suis %v, j'ai %vans et donc plus de 18 ans, c'est %v!\n", y, x, z)
+	fmt.Println(b, s, i, u, u8, i8, i16, u16, f)
 }
