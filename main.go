@@ -1,34 +1,33 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
-	var (
-		x int
-		y int
-	)
+	if x := rand.Int(); x%2 == 0 {
+		fmt.Println(x, "est un nombre pair")
+	} else {
+		fmt.Println(x, "est un nombre impair")
+	}
 
-	x = 15
-	y = 15
+	y := rand.Int() % 2
 
-	// Opérateurs Arithmétique (+ - / * %)
-	fmt.Println(x + y)
-	fmt.Println(x - y)
-	fmt.Println(x / y)
-	fmt.Println(x * y)
-	fmt.Println(x % y)
+	if y == 0 {
+		fmt.Println(y, "Paire!")
+	} else {
+		fmt.Println(y, "Impaire!")
+	}
 
-	// Opérateurs Relationnes (== != < <= > >=)
-	fmt.Println("--------------")
-	fmt.Println(x == y)
-	fmt.Println(x != y)
-	fmt.Println(x < y)
-	fmt.Println(x <= y)
-	fmt.Println(x > y)
-	fmt.Println(x >= y)
+	age := 15
 
-	// Opérateurs logiques (&& ||)
-	fmt.Println("--------------")
-	fmt.Println(x == y && x != y)
-	fmt.Println(x != y || x < y)
+	if age > 18 {
+		fmt.Println("Je suis majeur!")
+	} else if age == 18 {
+		fmt.Println("Je viens tout juste d'être majeur")
+	} else {
+		fmt.Println("Je suis mineur!")
+	}
+
 }
