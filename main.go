@@ -3,28 +3,27 @@ package main
 import "fmt"
 
 func main() {
-	//for i := 0; i < 5; i++ {
-	//	fmt.Println(i)
-	//}
+	// var list [n]type
+	var list [3]int
 
-	x := 0
-	//for x < 5 {
-	//	fmt.Println(x)
-	//	x++
-	//}
+	list[0] = 10
+	list[1] = 20
+	list[2] = 30
 
-	//for {
-	//	if x > 4 {
-	//		break
-	//	}
-	//	fmt.Println(x)
-	//	x++
-	//}
+	fmt.Println(list)
+	fmt.Println(list[0])
+	fmt.Println(list[1])
+	fmt.Println(list[2])
 
-	for ; x <= 10; x++ {
-		if x%2 == 1 {
-			continue
-		}
-		fmt.Println(x)
+	newList := [...]int{40, 50}
+
+	fmt.Println(newList)
+	fmt.Println(newList[0])
+	fmt.Println(newList[1])
+
+	bigList := [...]int{10, 20, 30, 40, 50, 69, 420, 777777, 50085}
+
+	for pos, value := range bigList {
+		fmt.Printf("Position %d est égale à %d.\n", pos, value)
 	}
 }
